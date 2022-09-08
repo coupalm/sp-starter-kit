@@ -70,7 +70,7 @@ export default class Links extends React.Component<ILinksProps, ILinksState> {
                       // Loop over all links per group
                       sortBy(this.state.groups[groupName], link => link.title.toLowerCase()).map(link => (
                         <div className={`${styles.column} ${styles.link}`}>
-                          <Link title={link.title} href={link.url} target={link.target}>
+                          <Link title={link.title} href={link.url} target={link.target} data-interception='off'>
                             {
                               link.icon && <Icon className={styles.icon} iconName={link.icon} />
                             }
